@@ -20,7 +20,8 @@ services:
       - "DB_HOST=${DB_HOST}"
     depends_on:
       - db
-   
+    deploy: 
+      replicas: 3
 
   db:
     build: ./db
